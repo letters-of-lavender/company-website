@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <h1>{{ title }}</h1>
+            <p class="tagline">A space for reflection, creativity, and gentle thoughts</p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/posts/">Blog</a>
+                <a href="/about/">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to *Letters of Lavender*</h2>
+            <p>A place to relax, reflect, and find inspiration in the beauty of words.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        {{ content | safe }}
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© {{ "now" | date: "%Y" }} Letters of Lavender</p>
+        </div>
+    </footer>
+</body>
+</html>
